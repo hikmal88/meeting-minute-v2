@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meeting Minute V2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">MEETING MANAGEMENT</span>
+        <h1>Meeting Minute <span>V2</span></h1>
+        <p>Rekod, urus dan cetak minit mesyuarat dengan mudah.</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn secondary" id="newMeetingBtn">+ Mesyuarat Baharu</button>
+        <button class="btn primary" id="printBtn">Cetak / PDF</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><span>Jumlah Mesyuarat</span><strong id="meetingCount">0</strong></div>
+      <div class="stat"><span>Agenda</span><strong id="agendaCount">0</strong></div>
+      <div class="stat"><span>Tindakan</span><strong id="actionCount">0</strong></div>
+      <div class="stat"><span>Selesai</span><strong id="doneCount">0</strong></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel meeting-list-panel">
+        <div class="panel-heading"><h2>Mesyuarat</h2><input id="searchMeeting" placeholder="Cari..." /></div>
+        <div id="meetingList" class="meeting-list"></div>
+      </aside>
+
+      <section class="panel editor-panel">
+        <div class="panel-heading"><h2 id="editorTitle">Butiran Mesyuarat</h2><button class="icon-btn danger" id="deleteBtn" title="Padam">🗑</button></div>
+        <form id="meetingForm">
+          <div class="form-grid">
+            <label>Nama Mesyuarat<input id="title" required placeholder="Contoh: Mesyuarat Pengurusan Bil. 1/2026" /></label>
+            <label>Tarikh<input id="date" type="date" required /></label>
+            <label>Masa<input id="time" type="time" /></label>
+            <label>Tempat<input id="location" placeholder="Bilik Mesyuarat / Online" /></label>
+            <label class="full">Pengerusi<input id="chairperson" placeholder="Nama pengerusi" /></label>
+            <label class="full">Kehadiran<textarea id="attendees" rows="3" placeholder="Senaraikan nama ahli yang hadir"></textarea></label>
+          </div>
+
+          <div class="section-head"><h3>Agenda & Perbincangan</h3><button type="button" class="btn small" id="addAgendaBtn">+ Tambah Agenda</button></div>
+          <div id="agendaContainer"></div>
+
+          <div class="section-head"><h3>Rumusan / Catatan</h3></div>
+          <textarea id="notes" class="full-text" rows="5" placeholder="Catatan tambahan, keputusan utama atau perkara lain..."></textarea>
+
+          <div class="form-actions"><span id="saveStatus">Belum disimpan</span><button class="btn primary" type="submit">Simpan Mesyuarat</button></div>
+        </form>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
