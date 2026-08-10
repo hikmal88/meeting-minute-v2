@@ -15,8 +15,11 @@
         <p>Rekod, urus dan cetak minit mesyuarat dengan mudah.</p>
       </div>
       <div class="header-actions">
-        <button class="btn secondary" id="themeToggle" type="button" aria-label="Tukar mod paparan">🌙 Dark</button>
+        <button class="btn secondary" id="themeToggle" type="button">🌙 Dark</button>
         <button class="btn secondary" id="newMeetingBtn" type="button">+ Mesyuarat Baharu</button>
+        <button class="btn secondary" id="exportBtn" type="button">⬇ Backup Data</button>
+        <button class="btn secondary" id="importBtn" type="button">⬆ Pulihkan Data</button>
+        <input id="importFile" type="file" accept="application/json" hidden />
         <button class="btn primary" id="printBtn" type="button">Cetak / PDF</button>
       </div>
     </header>
@@ -49,7 +52,7 @@
           <div id="agendaContainer"></div>
           <div class="section-head"><h3>Rumusan / Catatan</h3></div>
           <textarea id="notes" class="full-text" rows="5" placeholder="Catatan tambahan, keputusan utama atau perkara lain..."></textarea>
-          <div class="form-actions"><span id="saveStatus">Belum disimpan</span><button class="btn primary" type="submit">Simpan Mesyuarat</button></div>
+          <div class="form-actions"><span id="saveStatus">Auto-simpan aktif</span><button class="btn primary" type="submit">Simpan Mesyuarat</button></div>
         </form>
       </section>
     </section>
