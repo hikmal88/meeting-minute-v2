@@ -15,8 +15,9 @@
         <p>Rekod, urus dan cetak minit mesyuarat dengan mudah.</p>
       </div>
       <div class="header-actions">
-        <button class="btn secondary" id="newMeetingBtn">+ Mesyuarat Baharu</button>
-        <button class="btn primary" id="printBtn">Cetak / PDF</button>
+        <button class="btn secondary" id="themeToggle" type="button" aria-label="Tukar mod paparan">🌙 Dark</button>
+        <button class="btn secondary" id="newMeetingBtn" type="button">+ Mesyuarat Baharu</button>
+        <button class="btn primary" id="printBtn" type="button">Cetak / PDF</button>
       </div>
     </header>
 
@@ -34,7 +35,7 @@
       </aside>
 
       <section class="panel editor-panel">
-        <div class="panel-heading"><h2 id="editorTitle">Butiran Mesyuarat</h2><button class="icon-btn danger" id="deleteBtn" title="Padam">🗑</button></div>
+        <div class="panel-heading"><h2 id="editorTitle">Butiran Mesyuarat</h2><button class="icon-btn danger" id="deleteBtn" title="Padam" type="button">🗑</button></div>
         <form id="meetingForm">
           <div class="form-grid">
             <label>Nama Mesyuarat<input id="title" required placeholder="Contoh: Mesyuarat Pengurusan Bil. 1/2026" /></label>
@@ -44,13 +45,10 @@
             <label class="full">Pengerusi<input id="chairperson" placeholder="Nama pengerusi" /></label>
             <label class="full">Kehadiran<textarea id="attendees" rows="3" placeholder="Senaraikan nama ahli yang hadir"></textarea></label>
           </div>
-
           <div class="section-head"><h3>Agenda & Perbincangan</h3><button type="button" class="btn small" id="addAgendaBtn">+ Tambah Agenda</button></div>
           <div id="agendaContainer"></div>
-
           <div class="section-head"><h3>Rumusan / Catatan</h3></div>
           <textarea id="notes" class="full-text" rows="5" placeholder="Catatan tambahan, keputusan utama atau perkara lain..."></textarea>
-
           <div class="form-actions"><span id="saveStatus">Belum disimpan</span><button class="btn primary" type="submit">Simpan Mesyuarat</button></div>
         </form>
       </section>
